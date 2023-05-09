@@ -1,0 +1,804 @@
+    /* estilização padrão */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, 
+    body, 
+    #home,
+    .overlay, 
+    .espaco-nome-linkin-park{
+        height: 100%;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        color: black;
+    }
+
+
+
+    /*--------- FONTES ---------*/
+    @font-face {
+        font-family: kai;
+        src: url(../fonte/BebasKai.woff);
+    }
+
+    @font-face {
+        font-family: gravity ;
+        src: url(../fonte/Gravity-Book.woff);
+    }
+
+
+
+
+
+    /*--------- ANIMAÇÕES ---------*/
+    @keyframes animacao-titulo {
+        from {
+            letter-spacing: -0.2em;
+        }
+
+        to {
+            letter-spacing: var(--espaco-titulo);
+        }
+    }
+
+    @-webkit-keyframes animacao-titulo {
+        from {
+            letter-spacing: -0.2em;
+        }
+
+        to {
+            letter-spacing: var(--espaco-titulo);
+        }
+    }
+
+
+    @-moz-keyframes animacao-titulo {
+        from {
+            letter-spacing: -0.2em;
+        }
+
+        to {
+            letter-spacing: var(--espaco-titulo);
+        }
+    }
+
+
+    @keyframes animacao-opacidade {
+        from {
+            opacity: 0.0;
+        }
+
+        to {
+            opacity: 0.9;
+        }
+    }
+
+    @-webkit-keyframes animacao-opacidade {
+        from {
+            opacity: 0.0;
+        }
+
+        to {
+            opacity: 0.9;
+        }
+    }
+
+    @-moz-keyframes animacao-opacidade {
+        from {
+            opacity: 0.0;
+        }
+
+        to {
+            opacity: 0.9;
+        }
+    }
+
+
+
+
+    
+
+    
+    /* --------- VARIÁVEIS ---------*/
+    :root {
+        --cor-texto: #6b7683;
+        --distancia-linhas: 1.7em;
+        --espaco-titulo: 0.2em;
+        --cor-navegacao: rgba(0,0,0);
+    }
+
+
+
+
+
+
+
+    /* HOME DA PÁGINAE */
+    .overlay {
+        width:100%;
+        background-color: black;
+        opacity: 0.6;
+        padding: 1em;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+       
+    }
+
+    #home {
+        background-image: url(../imagens/photo_2023-05-08_00-12-56.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .espaco-nome-linkin-park {
+        display: flex;
+        align-items: center;
+    }
+
+    .espaco-nome {
+        width: 100%;
+        color: white;
+        padding: 1em 2em ;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        
+    }
+
+    .espaco-nome h1.nome-home {
+        font-family: kai;
+        color: white;
+        font-size: 9em;
+        letter-spacing: -0.04em;
+    }
+
+    h4.nome-home-tudo {
+        font-size: 2em;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3em;
+    }
+
+    #home, main, footer {
+        position: relative;
+    }
+
+
+    /* MENU DA PÁGINA */
+    .nav-link:hover,
+    .dropdown-item:hover,
+    .btn:hover {
+        transition: 1s all;
+    }
+
+
+    /* APLICANDO A FONTE */
+    header #logo,
+    footer #logo-footer {
+        font-family: kai;
+        letter-spacing: -0.04em;
+        font-weight: 500;
+    }
+
+    header #logo {
+        font-size: 3em;
+    }
+
+
+    #nav-menu ul li>a {
+        font-size: 0.83em;
+        padding-left: 1.6em;
+        font-family: gravity;
+        letter-spacing: 0.1em;
+    }
+
+    #navegacao {
+        background: var(--cor-navegacao);
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+    }
+
+    .dropdown-menu>a {
+        color: white;
+        font-size: 0.83em;
+        font-family: gravity;
+        letter-spacing: 0.1em;
+    }
+    /* FIM HOME */
+
+
+
+    /* MUDANDO A SELEÇÃO */
+    p::selection,
+    h1::selection,
+    h3::selection,
+    span::selection,
+    strong::selection {
+        background-color: rgb(173, 172, 172);
+        color: white;
+    }
+
+
+
+
+    #albuns img {
+        margin-bottom: 0.5em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+
+    .texto-site p {
+        color: var(--cor-texto) ;
+        font-size: 1em;
+        line-height: var(--distancia-linhas);
+        text-align: justify;
+    }
+
+
+
+
+
+    /* ---- APLICANDO AS ANIMAÇÕES --- */
+    .espaco-nome h1.nome-home {
+        animation-name: animacao-home;
+        animation-duration: 3s;
+        animation-direction: alternate;
+        animation-delay: 0;
+        animation-iteration-count: 1;
+
+        -webkit-animation-name: animacao-home;
+        -webkit-animation-duration: 3s;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-delay: 0;
+        -webkit-animation-iteration-count: 1;
+
+        -moz-animation-name: animacao-home;
+        -moz-animation-duration: 3s;
+        -moz-animation-direction: alternate;
+        -moz-animation-delay: 0;
+        -moz-animation-iteration-count: 1;
+    }
+
+    .efeito-titulo>h1 {
+        letter-spacing: var(--espaco-titulo);
+        animation-name: animacao-titulo;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+
+        -webkit-animation-name: animacao-titulo;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-direction: alternate;
+
+        -moz-animation-name: animacao-titulo;
+        -moz-animation-duration: 2s;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: 1;
+        -moz-animation-direction: alternate;
+
+    }
+
+    .espaco-nome-home h4,
+    .espaco-nome,
+    .musicas,
+    .singles,
+    .imagem-membro,
+    h2,
+    h3,
+    .imagens-cd,
+    .fileira-albuns,
+    .informacoes-membro,
+    .informacoes-album,
+    blockquote,
+    .fileira-singles,
+    .texto-site,
+    .formulario,
+    .fotos {
+        animation-name: animacao-opacidade ;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+
+        -webkit-animation-name: animacao-opacidade ;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-direction: alternate;
+
+        -moz-animation-name: animacao-opacidade ;
+        -moz-animation-duration: 2s;
+        -moz-animation-delay: 0s;
+        -moz-animation-iteration-count: 1;
+        -moz-animation-direction: alternate;
+    }
+
+
+
+
+    .musicas,
+    .singles {
+        padding: 30px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+    }
+
+    ol#lista-musicas>li {
+        font-size: 1em;
+        padding: 25px 0 25px 25px;
+        border-bottom: solid #eeeeee 1px;
+        color: var(--cor-texto);
+    }
+
+
+    ol#lista-musicas>li.tirando-borda {
+        border-bottom: none;
+    }
+
+
+
+    /* cores das informações */
+    .informacoes-membro span,
+    .informacoes-album span {
+        color:  var(--cor-texto);
+    }
+
+
+    /*informações album*/
+    .informacoes-album {
+        font-size: 0.95em;
+    }
+
+
+    ol#musicas li {
+        font-size: 1em;
+        border-bottom: solid rgb(196, 195, 195) 1px;
+        padding: 10px 0 10px 5px;
+    }
+
+
+    blockquote {
+        padding-left: 1em;
+        font-size: 0.8em;
+        border-left: black solid 3px;
+    }
+    blockquote footer {
+        background-color: white
+    }
+
+
+
+
+
+    /* albuns,singles, remixes */
+    .img-lp {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .img-lp a>img {
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+    }
+
+    .img-lp:hover {
+        opacity: 0.7;
+        margin-top: -10px;
+        transition: all 1s;
+    }
+
+
+
+    /* contato */
+    input {
+        width: 100%;
+        height: 2.5em;
+        
+    }
+
+    input, 
+    textarea {
+        border: solid #e4e1e1 1px;
+        border-radius: 4px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 5px;
+    }
+
+    label {
+        margin-top: 0.7em;
+        margin-bottom: 0.4em;
+        display: block;
+        font-size: 1em;
+        color: var(--cor-texto);
+    }
+
+    textarea {
+    width: 100%;
+    }
+
+
+
+
+
+
+
+    /* rodapé */
+    footer { 
+        background: rgba(0,0,0,0.9);
+    }
+
+    footer #logo-footer {
+        font-size: 2.5em;
+        color: var(--cor-texto);
+        
+    }
+
+    footer p {
+        color: var(--cor-texto);
+        
+        font-size: 1.03em;
+        font-family: gravity;
+    }
+
+    a.ancora {
+        font-size: 0.9em;
+        color: whitesmoke;;
+        
+    }
+
+    a.ancora:hover {
+        color: var(--cor-texto);
+        transition: all 1s;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Media queries (BREAKPOINTS) */
+
+    @media (max-width: 575.98px) { 
+        /* nome-loo */
+        header #logo {
+            font-size: 2em;
+        }
+
+        /*nome animação */
+        .espaco-nome h1.nome-home {
+            font-size: 3em;
+        }
+        .espaco-nome h4 {
+            font-size: 0.8em;
+        }
+
+        /*borda animação */
+        .espaco-nome {
+            padding-top: 1em;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+
+        /*nav-menu*/
+        #nav-menu ul li>a,
+        .dropdown-menu>a {
+            font-size: 0.80em;
+        }
+
+
+
+        /*texto site*/
+        .efeito-titulo>h1 {
+            font-size: 1.60em;
+        }
+
+        .texto-site p {
+            font-size: 0.90em;
+        }
+
+        h3, h4 {
+            font-size: 1.1em;
+        }
+
+        
+
+
+        .informacoes-membro span,
+        .informacoes-album span,
+        .informacoes-album strong,
+        .informacoes-membro strong,
+        ol#lista-musicas>li {
+            font-size: 0.90em;
+        }
+
+
+        label {
+            font-size: 0.9em;
+        }
+
+        
+
+        /* rodapé */
+        footer #logo-footer {
+            font-size: 2em;
+            color: var(--cor-texto);
+            
+        }
+        
+        footer .btn,
+        button.botao-submit {
+            font-size: 0.80em;
+        }
+
+        footer .espaco-copy-right p {
+            font-size: 0.9em;
+        }
+
+        footer .espaco-copy-right a.ancora>strong{
+            font-size: 0.85em;
+        }
+    }
+
+    /* Small devices (landscape phones, 576px and up)*/
+    @media (min-width: 576px) and (max-width: 767.98px) {
+
+        /* nome-loo */
+        header #logo {
+            font-size: 2.2em;
+        }
+
+        /*nome animação */
+        .espaco-nome h1.nome-home {
+            font-size: 3.5em;
+        }
+        .espaco-nome h4 {
+            font-size: 1em;
+        }
+
+        /*borda animação */
+        .espaco-nome {
+            padding-top: 1em;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+
+        /*nav-menu*/
+        #nav-menu ul li>a,
+        .dropdown-menu>a {
+            font-size: 0.80em;
+        }
+
+
+
+        /*texto site*/
+        .texto-site p {
+            font-size: 0.9em;
+        }
+
+        h3, h4 {
+            font-size: 1.1em;
+        }
+
+        .efeito-titulo>h1 {
+            font-size: 1.80em;
+        }
+
+
+        .informacoes-membro span,
+        .informacoes-album span,
+        .informacoes-album strong,
+        .informacoes-membro strong,
+        ol#lista-musicas>li {
+            font-size: 0.95em;
+        }
+
+
+        label {
+            font-size: 0.95em;
+        }
+
+
+        /* rodapé */
+        footer .btn {
+            font-size: 1.1em;
+        }
+
+        footer .espaco-copy-right p {
+            font-size: 0.8em;
+        }
+
+        footer .espaco-copy-right a>strong{
+            font-size: 0.90em;
+        }
+    }
+
+    /* Medium devices (tablets, 768px and up)*/
+    @media (min-width: 768px) and (max-width: 991.98px) { 
+
+        /* nome-loo */
+        header #logo {
+            font-size: 2.2em;
+        }
+
+        /*nome animação */
+        .espaco-nome h1.nome-home {
+            font-size: 3.5em;
+        }
+        .espaco-nome h4 {
+            font-size: 1em;
+        }
+
+        /*borda animação */
+        .espaco-nome {
+            padding-top: 1em;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+
+        /*nav-menu*/
+        #nav-menu ul li>a,
+        .dropdown-menu>a {
+            font-size: 0.80em;
+        }
+
+
+
+        /*texto site*/
+        .texto-site p {
+            font-size: 0.95em;
+        }
+
+        h3, h4 {
+            font-size: 1.3em;
+        }
+
+        .efeito-titulo>h1 {
+            font-size: 2.5em;
+        }
+
+
+        .informacoes-membro span,
+        .informacoes-album span,
+        .informacoes-album strong,
+        .informacoes-membro strong,
+        ol#lista-musicas>li {
+            font-size: 0.95em;
+        }
+
+
+        label {
+            font-size: 1em;
+        }
+
+        
+
+        /* rodapé */
+        footer .btn {
+            font-size: 1.1em;
+        }
+
+        footer .espaco-copy-right p {
+            font-size: 1em;
+        }
+
+        footer .espaco-copy-right a>strong{
+            font-size: 0.9em;
+        }
+    }
+
+    /* Large devices (desktops, 992px and up)*/
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        /* nome-loo */
+        header #logo {
+            font-size: 2.5em;
+        }
+
+        /*nome animação */
+        .espaco-nome h1.nome-home {
+            font-size: 4.5em;
+        }
+        .espaco-nome h4 {
+            font-size: 2em;
+        }
+
+        /*borda animação */
+        .espaco-nome {
+            padding-top: 1em;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+
+        /*nav-menu*/
+        #nav-menu ul li>a,
+        .dropdown-menu>a {
+            font-size: 0.80em;
+        }
+
+
+
+        /*texto site*/
+        .texto-site p {
+            font-size: 0.95em;
+        }
+
+        h3, h4 {
+            font-size: 1.3em;
+        }
+
+        .efeito-titulo>h1 {
+            font-size: 2.5em;
+        }
+
+
+        .informacoes-membro span,
+        .informacoes-album span,
+        .informacoes-album strong,
+        .informacoes-membro strong,
+        ol#lista-musicas>li {
+            font-size: 0.95em;
+        }
+
+
+        label {
+            font-size: 1em;
+        }
+
+        
+
+        /* rodapé */
+        footer .btn {
+            font-size: 1.1em;
+        }
+
+        footer .espaco-copy-right p {
+            font-size: 1em;
+        }
+
+        footer .espaco-copy-right a>strong{
+            font-size: 0.95em;
+        }
+
+    }
+
+    /* Extra large devices (large desktops, 1200px and up)*/
+    @media (min-width: 1200px) { 
+
+    }
